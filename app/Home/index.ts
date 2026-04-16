@@ -55,6 +55,8 @@ export const styles = StyleSheet.create({
     flex: 1,
     padding: 15,
     marginTop: 10,
+    flexWrap: "wrap",
+    flexDirection: "row",
   },
 
   textSecondary: {

@@ -1,6 +1,5 @@
 import { AntDesign } from "@expo/vector-icons";
 import * as Crypto from "expo-crypto";
-import { Wrench, Zap, Paintbrush, Brush } from "lucide-react-native";
 
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -47,7 +46,7 @@ export default function App() {
           <View style={styles.containerInput}>
             <Input placeholder="Qual serviço você precisa?" />
           </View>
-          {/* View Profissionais mais procurados */}
+
           <View
             style={{
               flexDirection: "row",

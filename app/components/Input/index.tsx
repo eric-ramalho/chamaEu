@@ -11,7 +11,7 @@ export function Input({ ...rest }: TextInputProps) {
         size={24}
         color="#b4b4b4"
       />
-      <TextInput style={styles.input} {...rest}></TextInput>;
+      <TextInput style={styles.input} {...rest}></TextInput>
     </View>
   );
 }
