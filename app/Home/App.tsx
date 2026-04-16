@@ -21,6 +21,21 @@ const data: Item[] = [
   { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
   { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
   { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
+  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
+  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
+  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
+  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
+  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
+  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
+  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
+  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
+  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
+  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
+  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
+  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
+  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
+  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
+  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
 ];
 
 export default function App() {
@@ -65,6 +80,7 @@ export default function App() {
             <FlatList
               data={data}
               keyExtractor={(item) => item.id}
+              numColumns={2}
               renderItem={({ item }) => (
                 <Card
                   idCard={item.id}

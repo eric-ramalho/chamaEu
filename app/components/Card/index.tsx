@@ -15,8 +15,10 @@ export function Card({ title, profession }: Props) {
 
   return (
     <TouchableOpacity style={styles.card}>
-      {Icon && <Icon size={24} color="#27d366" />}
-      <Text>{title}</Text>
+      <View style={styles.icons}>
+        {Icon && <Icon size={24} color="#25d366" />}
+      </View>
+      <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
 }

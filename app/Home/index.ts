@@ -53,13 +53,14 @@ export const styles = StyleSheet.create({
 
   containerList: {
     flex: 1,
-    padding: 15,
-    marginTop: 10,
-    flexWrap: "wrap",
-    flexDirection: "row",
   },
 
   textSecondary: {
     color: "#717579",
+  },
+  list: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    paddingHorizontal: 15,
   },
 });
