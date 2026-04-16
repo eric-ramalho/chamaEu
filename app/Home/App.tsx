@@ -41,7 +41,7 @@ const data: Item[] = [
 export default function App() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.container} edges={["top"]}>
+      <SafeAreaView style={styles.container}>
         <StatusBar style="light" translucent />
         <View style={styles.headerArea}>
           <ButtonPrestador

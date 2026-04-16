@@ -53,6 +53,7 @@ export const styles = StyleSheet.create({
 
   containerList: {
     flex: 1,
+    marginBottom: 20,
   },
 
   textSecondary: {
@@ -61,6 +62,6 @@ export const styles = StyleSheet.create({
   list: {
     flexDirection: "row",
     flexWrap: "wrap",
-    paddingHorizontal: 15,
+    paddingHorizontal: 18,
   },
 });
