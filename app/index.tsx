@@ -2,7 +2,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { data } from "../components/utils/profissao/data";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { styles } from "./styleHome";
+import { styles } from "../components/StylesApps/Home/styleHome";
 import { Text, View, FlatList } from "react-native";
 
 import { useRouter } from "expo-router";

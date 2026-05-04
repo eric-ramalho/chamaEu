@@ -4,7 +4,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { data } from "../../components/utils/profissao/data";
 import { IconsMain } from "../../components/Home/IconsMain";
-import { styles } from "./styleProfissionais";
+import { styles } from "../../components/StylesApps/Profissionais/styleProfissionais";
+import { Card } from "../../components/Profissionais/Card";
 
 export default function Detalhe() {
   const { id } = useLocalSearchParams();
@@ -43,6 +44,7 @@ export default function Detalhe() {
       />
       <View>
         <Text>Oláa</Text>
+        <Card />
       </View>
     </SafeAreaView>
   );
