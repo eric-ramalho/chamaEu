@@ -5,7 +5,6 @@ import { StatusBar } from "expo-status-bar";
 export default function Layout() {
   return (
     <SafeAreaProvider>
-      <StatusBar style="light" translucent />
       <Stack screenOptions={{ headerShown: false }} />
     </SafeAreaProvider>
   );

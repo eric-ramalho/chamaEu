@@ -1,13 +1,21 @@
 import { View, Text } from "react-native";
-import { useLocalSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { StatusBar } from "expo-status-bar";
+import { data } from "../../components/utils/profissao/data";
 
 export default function Detalhe() {
   const { id } = useLocalSearchParams();
-
+  const item = data.find((i) => i.id === id);
   return (
-    <View>
-      <Text>Detalhe do serviço</Text>
-      <Text>ID: {id}</Text>
-    </View>
+    <SafeAreaView>
+      <StatusBar style="light" translucent />
+      <Stack.Screen
+        options={{ headerShown: true, title: ` ${item?.profession}` }}
+      />
+      <View>
+        <Text>Detalhes do profissional {item?.profession}</Text>
+      </View>
+    </SafeAreaView>
   );
 }

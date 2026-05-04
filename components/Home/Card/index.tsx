@@ -1,7 +1,7 @@
 import { TouchableOpacity, View, Text } from "react-native";
 import { styles } from "./style";
-import { profissaoIcon, Profession } from "../../utils/Profissao";
-import { HelpCircle } from "lucide-react-native";
+import { Profession } from "../../utils/profissao";
+import { IconsMain } from "../IconsMain";
 
 type Props = {
   idCard: string;
@@ -11,13 +11,10 @@ type Props = {
 };
 
 export function Card({ title, profession, onPress }: Props) {
-  const key = profession.toLowerCase() as keyof typeof profissaoIcon;
-  const Icon = profissaoIcon[key] || HelpCircle;
-
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>
       <View style={styles.icons}>
-        {Icon && <Icon size={24} color="#25d366" />}
+        <IconsMain profession={profession} />
       </View>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>

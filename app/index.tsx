@@ -1,44 +1,15 @@
 import { AntDesign } from "@expo/vector-icons";
-import * as Crypto from "expo-crypto";
-
+import { data } from "../components/utils/profissao/data";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { styles } from "./styleHome";
 import { Text, View, FlatList } from "react-native";
-import { Link } from "expo-router";
+
 import { useRouter } from "expo-router";
 
-import { Profession } from "../components/utils/Profissao";
 import { ButtonPrestador } from "../components/AreaPrestador";
 import { Input } from "../components/Home/Input";
 import { Card } from "../components/Home/Card";
-
-type Item = {
-  id: string;
-  title: string;
-  profession: Profession;
-};
-
-const data: Item[] = [
-  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
-  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
-  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
-  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
-  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
-  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
-  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
-  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
-  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
-  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
-  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
-  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
-  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
-  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
-  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
-  { id: Crypto.randomUUID(), title: "Encanador", profession: "encanador" },
-  { id: Crypto.randomUUID(), title: "Eletricista", profession: "eletricista" },
-  { id: Crypto.randomUUID(), title: "Pintor", profession: "pintor" },
-];
 
 export default function Home() {
   const router = useRouter();
