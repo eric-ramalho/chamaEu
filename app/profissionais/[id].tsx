@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import { Stack, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { data } from "../../components/utils/profissao/data";
+import { data } from "../../components/utils/db/Listacategorias";
 import { IconsMain } from "../../components/Home/IconsMain";
 import { styles } from "../../components/StylesApps/Profissionais/styleProfissionais";
 import { Card } from "../../components/Profissionais/Card";
@@ -42,10 +42,11 @@ export default function Detalhe() {
           ),
         }}
       />
-      <View>
-        <Text>Oláa</Text>
-        <Card />
-      </View>
+      <Card
+        name="Eric"
+        description="Eletricista a 18 anos no mercado trabalhando com automação residencial e manutenção residencial"
+        location="Centro"
+      />
     </SafeAreaView>
   );
 }

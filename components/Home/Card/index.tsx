@@ -1,6 +1,6 @@
 import { TouchableOpacity, View, Text } from "react-native";
 import { styles } from "./style";
-import { Profession } from "../../utils/profissao";
+import { Profession } from "../../utils/db/ListaProfissao";
 import { IconsMain } from "../IconsMain";
 
 type Props = {

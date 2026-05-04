@@ -1,5 +1,5 @@
 import { AntDesign } from "@expo/vector-icons";
-import { data } from "../components/utils/profissao/data";
+import { data } from "../components/utils/db/Listacategorias";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { styles } from "../components/StylesApps/Home/styleHome";
