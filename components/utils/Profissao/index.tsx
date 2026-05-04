@@ -1,4 +1,10 @@
-import { Paintbrush, Wrench, Hammer, Plug } from "lucide-react-native";
+import {
+  Paintbrush,
+  Wrench,
+  Hammer,
+  Plug,
+  UserMinus,
+} from "lucide-react-native";
 
 export const profissaoIcon = {
   pintor: Paintbrush,
