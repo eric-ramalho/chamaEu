@@ -54,6 +54,8 @@ export const styles = StyleSheet.create({
   containerList: {
     flex: 1,
     marginBottom: 20,
+    width: "95%",
+    alignSelf: "center",
   },
 
   textSecondary: {

@@ -19,8 +19,8 @@ export function Card({ name, description, location }: Props) {
           }}
         >
           <View style={styles.profile}>
-            <Text style={{ fontSize: 18, fontWeight: 600, letterSpacing: 1.2 }}>
-              {name}
+            <Text style={{ fontSize: 24, fontWeight: 700 }}>
+              {name.charAt(0).toUpperCase()}
             </Text>
           </View>
           <TouchableOpacity>
@@ -28,6 +28,9 @@ export function Card({ name, description, location }: Props) {
           </TouchableOpacity>
         </View>
         <View style={styles.infoProfile}>
+          <Text style={{ fontSize: 18, fontWeight: 600, letterSpacing: 1.2 }}>
+            {name}
+          </Text>
           <Text style={{ color: "#3f3f3f", flexWrap: "wrap", width: "80%" }}>
             {description}
           </Text>

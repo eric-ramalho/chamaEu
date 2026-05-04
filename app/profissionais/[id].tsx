@@ -6,6 +6,9 @@ import { data } from "../../components/utils/db/Listacategorias";
 import { IconsMain } from "../../components/Home/IconsMain";
 import { styles } from "../../components/StylesApps/Profissionais/styleProfissionais";
 import { Card } from "../../components/Profissionais/Card";
+import { profile } from "../../components/utils/db/Profile";
+
+import { FlatList } from "react-native";
 
 export default function Detalhe() {
   const { id } = useLocalSearchParams();
@@ -42,10 +45,17 @@ export default function Detalhe() {
           ),
         }}
       />
-      <Card
-        name="Eric"
-        description="Eletricista a 18 anos no mercado trabalhando com automação residencial e manutenção residencial"
-        location="Centro"
+      <FlatList
+        data={profile.filter((p) => p.profession === item.profession)}
+        keyExtractor={(data) => data.id}
+        numColumns={1}
+        renderItem={({ item }) => (
+          <Card
+            name={item.name}
+            description={item.description}
+            location={item.location}
+          />
+        )}
       />
     </SafeAreaView>
   );

@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
 
   infoPeople: {
     flexDirection: "row",
-    gap: 20,
+    gap: 15,
     alignItems: "center",
   },
 
@@ -36,6 +36,7 @@ export const styles = StyleSheet.create({
   infoProfile: {
     flex: 1,
     gap: 8,
+    marginLeft: 15,
   },
   ButtonWhatsApp: {
     flexDirection: "row",
