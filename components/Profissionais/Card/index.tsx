@@ -5,8 +5,9 @@ type Props = {
   name: string;
   description: string;
   location: string;
+  onPress?: () => void;
 };
-export function Card({ name, description, location }: Props) {
+export function Card({ name, description, location, onPress }: Props) {
   return (
     <View style={styles.containerMain}>
       <View style={styles.infoPeople}>
@@ -24,7 +25,9 @@ export function Card({ name, description, location }: Props) {
             </Text>
           </View>
           <TouchableOpacity>
-            <Text style={styles.buttonProfile}>Ver perfil</Text>
+            <Text style={styles.buttonProfile} onPress={onPress}>
+              Ver perfil
+            </Text>
           </TouchableOpacity>
         </View>
         <View style={styles.infoProfile}>

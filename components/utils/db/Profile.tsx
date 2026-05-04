@@ -67,5 +67,3 @@ export const profile: Profile[] = [
     profession: "pintor",
   },
 ];
-
-console.log(profile);

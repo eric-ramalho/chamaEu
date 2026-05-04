@@ -7,6 +7,7 @@ import { IconsMain } from "../../components/Home/IconsMain";
 import { styles } from "../../components/StylesApps/Profissionais/styleProfissionais";
 import { Card } from "../../components/Profissionais/Card";
 import { profile } from "../../components/utils/db/Profile";
+import { useRouter } from "expo-router";
 
 import { FlatList } from "react-native";
 
@@ -22,6 +23,7 @@ export default function Detalhe() {
       </SafeAreaView>
     );
   }
+  const router = useRouter();
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -54,6 +56,7 @@ export default function Detalhe() {
             name={item.name}
             description={item.description}
             location={item.location}
+            onPress={() => router.push(`/profissionais/profile${item.id}`)}
           />
         )}
       />
