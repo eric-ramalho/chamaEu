@@ -10,7 +10,7 @@ import { useRouter } from "expo-router";
 
 import { Profession } from "../components/utils/Profissao";
 import { ButtonPrestador } from "../components/AreaPrestador";
-import { Input } from "../components/Input";
+import { Input } from "../components/Home/Input";
 import { Card } from "../components/Home/Card";
 
 type Item = {
