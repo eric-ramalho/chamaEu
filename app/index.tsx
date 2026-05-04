@@ -5,11 +5,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { styles } from "./styleHome";
 import { Text, View, FlatList } from "react-native";
+import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 
 import { Profession } from "../components/utils/Profissao";
 import { ButtonPrestador } from "../components/AreaPrestador";
 import { Input } from "../components/Input";
-import { Card } from "../components/Card";
+import { Card } from "../components/Home/Card";
 
 type Item = {
   id: string;
@@ -39,6 +41,7 @@ const data: Item[] = [
 ];
 
 export default function Home() {
+  const router = useRouter();
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" translucent />
@@ -83,6 +86,7 @@ export default function Home() {
                 idCard={item.id}
                 title={item.title}
                 profession={item.profession}
+                onPress={() => router.push(`/profissionais/${item.id}`)}
               />
             )}
             showsVerticalScrollIndicator={false}
