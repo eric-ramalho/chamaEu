@@ -1,5 +1,5 @@
 import * as Crypto from "expo-crypto";
-import { Profession } from "./listaProfissao";
+import { Profession } from "./ListaProfissao";
 
 type Item = {
   id: string;

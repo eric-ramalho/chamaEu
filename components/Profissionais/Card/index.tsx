@@ -1,6 +1,7 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./style";
 import { MapPin, MessageCircle } from "lucide-react-native";
+import PictureProfile from "../PictureProfile";
 type Props = {
   name: string;
   description: string;
@@ -19,11 +20,7 @@ export function Card({ name, description, location, onPress }: Props) {
             justifyContent: "center",
           }}
         >
-          <View style={styles.profile}>
-            <Text style={{ fontSize: 24, fontWeight: 700 }}>
-              {name.charAt(0).toUpperCase()}
-            </Text>
-          </View>
+          <PictureProfile name={name.charAt(0).toUpperCase()} />
           <TouchableOpacity>
             <Text style={styles.buttonProfile} onPress={onPress}>
               Ver perfil

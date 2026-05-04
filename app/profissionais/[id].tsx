@@ -15,6 +15,7 @@ export default function Detalhe() {
   const { id } = useLocalSearchParams();
 
   const item = data.find((i) => i.id === id);
+  const dataProfile = profile.find((p) => p.id === id);
 
   if (!item) {
     return (
@@ -56,7 +57,9 @@ export default function Detalhe() {
             name={item.name}
             description={item.description}
             location={item.location}
-            onPress={() => router.push(`/profissionais/profile${item.id}`)}
+            onPress={() =>
+              router.push(`/profissionais/profile/${dataProfile.id}`)
+            }
           />
         )}
       />
