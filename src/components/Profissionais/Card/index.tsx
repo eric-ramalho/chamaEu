@@ -1,7 +1,8 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./style";
-import { MapPin, MessageCircle } from "lucide-react-native";
+import { MapPin, User } from "lucide-react-native";
 import PictureProfile from "../PictureProfile";
+import { ButtonEnter } from "../ButtonEnter";
 type Props = {
   name: string;
   description: string;
@@ -21,11 +22,6 @@ export function Card({ name, description, location, onPress }: Props) {
           }}
         >
           <PictureProfile name={name.charAt(0).toUpperCase()} />
-          <TouchableOpacity>
-            <Text style={styles.buttonProfile} onPress={onPress}>
-              Ver perfil
-            </Text>
-          </TouchableOpacity>
         </View>
         <View style={styles.infoProfile}>
           <Text style={{ fontSize: 18, fontWeight: 600, letterSpacing: 1.2 }}>
@@ -41,12 +37,7 @@ export function Card({ name, description, location, onPress }: Props) {
         </View>
       </View>
 
-      <TouchableOpacity style={styles.ButtonWhatsApp}>
-        <MessageCircle color={"white"} />
-        <Text style={{ color: "white", fontWeight: 700, fontSize: 16 }}>
-          Chamar no WhatsApp
-        </Text>
-      </TouchableOpacity>
+      <ButtonEnter name="Ver Perfil" onPress={onPress} />
     </View>
   );
 }
