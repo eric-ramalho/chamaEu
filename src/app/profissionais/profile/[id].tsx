@@ -36,7 +36,7 @@ export default function Detalhe() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top"]}>
       <StatusBar style="light" translucent backgroundColor="transparent" />
       <Stack.Screen options={{ headerShown: false }} />
       <View style={styles.customHeader}>
@@ -151,10 +151,16 @@ export default function Detalhe() {
             renderItem={() => <View style={styles.imageMock} />}
           />
         </View>
+        <SafeAreaView
+          edges={["bottom"]}
+          style={{ backgroundColor: "#ffffff" }}
+        />
       </View>
       <View style={styles.footerArea}>
         <ButtonEnter Icon={MessageCircle} name="Entrar em Contato" />
       </View>
+
+      <SafeAreaView edges={["bottom"]} style={{ backgroundColor: "#ffffff" }} />
     </SafeAreaView>
   );
 }

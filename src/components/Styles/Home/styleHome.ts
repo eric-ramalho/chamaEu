@@ -50,6 +50,11 @@ export const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 3,
   },
+  Input: {
+    color: "#000000",
+    height: 50,
+    fontSize: 16,
+  },
 
   containerList: {
     flex: 1,

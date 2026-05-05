@@ -19,7 +19,7 @@ import { data } from "@/src/data/Listacategorias";
 export default function Home() {
   const router = useRouter();
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top"]}>
       <StatusBar style="light" translucent />
 
       <View style={styles.headerArea}>
@@ -39,7 +39,12 @@ export default function Home() {
             onPress={Keyboard.dismiss}
             accessible={false}
           >
-            <Input placeholder="Qual serviço você precisa?" />
+            <Input
+              placeholder="Qual serviço você precisa?"
+              placeholderTextColor="#999999"
+              keyboardType="default"
+              maxLength={30}
+            />
           </TouchableWithoutFeedback>
         </View>
 
@@ -73,6 +78,10 @@ export default function Home() {
             showsVerticalScrollIndicator={false}
           />
         </View>
+        <SafeAreaView
+          edges={["bottom"]}
+          style={{ backgroundColor: "#ffffff" }}
+        />
       </View>
     </SafeAreaView>
   );
