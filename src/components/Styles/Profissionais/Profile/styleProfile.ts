@@ -74,11 +74,6 @@ export const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#212529",
   },
-  imageGridContainer: {
-    width: "100%",
-    paddingHorizontal: 20,
-    marginTop: 20,
-  },
 
   imageGrid: {
     width: "100%",
@@ -87,18 +82,45 @@ export const styles = StyleSheet.create({
     marginTop: 10,
   },
 
+  footerArea: {
+    backgroundColor: "#ffffff",
+    padding: 20,
+    borderTopWidth: 1,
+    borderTopColor: "#dee2e6",
+  },
+  imageGridContainer: {
+    width: "100%",
+    marginTop: 20,
+    alignItems: "center",
+    gap: 10,
+  },
+
+  imageListContent: {
+    paddingHorizontal: 20,
+    gap: 12,
+  },
+
   imageMock: {
-    flex: 1,
+    width: 130,
     height: 110,
     backgroundColor: "#e9ecef",
     borderRadius: 12,
     borderWidth: 1,
     borderColor: "#dee2e6",
   },
-  footerArea: {
-    backgroundColor: "#ffffff",
-    padding: 20,
-    borderTopWidth: 1,
-    borderTopColor: "#dee2e6",
+  customHeader: {
+    position: "absolute",
+    top: 45,
+    left: 0,
+    right: 0,
+    zIndex: 10,
+    paddingHorizontal: 20,
+  },
+
+  backButton: {
+    width: 40,
+    height: 40,
+    justifyContent: "center",
+    alignItems: "flex-start",
   },
 });

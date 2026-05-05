@@ -1,16 +1,25 @@
-import { Text, View } from "react-native";
+import {
+  Text,
+  View,
+  FlatList,
+  Pressable,
+  TouchableOpacity,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Stack, useLocalSearchParams } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { styles } from "../../../src/components/Styles/Profissionais/Profile/styleProfile";
 import PictureProfile from "../../../src/components/Profissionais/PictureProfile";
 import { profile } from "../../../src/data/Profile";
+import { MockupImages } from "../../../src/data/MockupImages";
+import { router } from "expo-router";
 import {
   MapPin,
   BriefcaseBusiness,
   CircleCheck,
   ChevronRight,
   MessageCircle,
+  ArrowLeft,
 } from "lucide-react-native";
 import { ButtonEnter } from "../../../src/components/Profissionais/ButtonEnter";
 
@@ -31,11 +40,18 @@ export default function Detalhe() {
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" translucent backgroundColor="transparent" />
       <Stack.Screen options={{ headerShown: false }} />
-
+      <View style={styles.customHeader}>
+        <Pressable onPress={() => router.back()} style={styles.backButton}>
+          <ArrowLeft size={26} color="#fff" />
+        </Pressable>
+      </View>
       <View style={styles.headerArea}>
-        <View style={styles.containerHeader}>
+        <TouchableOpacity
+          style={styles.containerHeader}
+          onPress={() => router.back()}
+        >
           <PictureProfile name={item.name.charAt(0).toUpperCase()} />
-        </View>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.contentArea}>
@@ -127,17 +143,14 @@ export default function Detalhe() {
         {/* Adicionando Fotos */}
         <View style={styles.imageGridContainer}>
           <Text style={styles.headerTitle}>Fotos</Text>
-
-          <View style={styles.imageGrid}>
-            <View style={styles.imageMock} />
-            <View style={styles.imageMock} />
-            <View style={styles.imageMock} />
-            <ChevronRight
-              color={"#35d670bd"}
-              style={{ marginTop: 50 }}
-              size={25}
-            />
-          </View>
+          <FlatList
+            data={MockupImages}
+            keyExtractor={(item) => String(item)}
+            horizontal
+            showsHorizontalScrollIndicator={true}
+            contentContainerStyle={styles.imageListContent}
+            renderItem={() => <View style={styles.imageMock} />}
+          />
         </View>
       </View>
       <View style={styles.footerArea}>

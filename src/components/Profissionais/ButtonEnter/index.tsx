@@ -8,7 +8,11 @@ type Props = {
 };
 export function ButtonEnter({ name, onPress, Icon, ...rest }: Props) {
   return (
-    <TouchableOpacity style={styles.ButtonWhatsApp} onPress={onPress}>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      style={styles.ButtonWhatsApp}
+      onPress={onPress}
+    >
       {Icon && <Icon color="white" />}
       <Text style={{ color: "white", fontWeight: "700", fontSize: 16 }}>
         {name}
