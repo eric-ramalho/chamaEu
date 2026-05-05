@@ -44,6 +44,7 @@ export const styles = StyleSheet.create({
 
   textSecondary: {
     color: "#717579",
+    marginTop: 5,
   },
 
   list: {
@@ -72,5 +73,32 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "600",
     color: "#212529",
+  },
+  imageGridContainer: {
+    width: "100%",
+    paddingHorizontal: 20,
+    marginTop: 20,
+  },
+
+  imageGrid: {
+    width: "100%",
+    flexDirection: "row",
+    gap: 10,
+    marginTop: 10,
+  },
+
+  imageMock: {
+    flex: 1,
+    height: 110,
+    backgroundColor: "#e9ecef",
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#dee2e6",
+  },
+  footerArea: {
+    backgroundColor: "#ffffff",
+    padding: 20,
+    borderTopWidth: 1,
+    borderTopColor: "#dee2e6",
   },
 });

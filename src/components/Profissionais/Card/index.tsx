@@ -37,7 +37,7 @@ export function Card({ name, description, location, onPress }: Props) {
         </View>
       </View>
 
-      <ButtonEnter name="Ver Perfil" onPress={onPress} />
+      <ButtonEnter Icon={User} name="Ver Perfil" onPress={onPress} />
     </View>
   );
 }

@@ -5,7 +5,14 @@ import { StatusBar } from "expo-status-bar";
 import { styles } from "../../../src/components/Styles/Profissionais/Profile/styleProfile";
 import PictureProfile from "../../../src/components/Profissionais/PictureProfile";
 import { profile } from "../../../src/data/Profile";
-import { MapPin, BriefcaseBusiness } from "lucide-react-native";
+import {
+  MapPin,
+  BriefcaseBusiness,
+  CircleCheck,
+  ChevronRight,
+  MessageCircle,
+} from "lucide-react-native";
+import { ButtonEnter } from "../../../src/components/Profissionais/ButtonEnter";
 
 export default function Detalhe() {
   const { id } = useLocalSearchParams();
@@ -74,11 +81,67 @@ export default function Detalhe() {
 
           <View style={{ width: "100%", paddingHorizontal: 20, marginTop: 10 }}>
             <Text style={styles.headerTitle}>Sobre</Text>
-            <Text>{item.description}</Text>
+            <Text style={styles.textSecondary}>{item.description}</Text>
+            {/* Limitar a quantidade descritiva */}
+          </View>
+          <View
+            style={{
+              width: "100%",
+              marginTop: 20,
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              gap: 10,
+              paddingHorizontal: 20,
+            }}
+          >
+            <BriefcaseBusiness color={"#35d671"} size={17} />
+            <Text style={[styles.headerTitle, { marginTop: 5 }]}>
+              Serviços Oferecidos
+            </Text>
+          </View>
+          <View style={{ width: "100%", paddingHorizontal: 20, marginTop: 10 }}>
+            {item.offeredService?.map((service, index) => (
+              <View
+                style={{ flexDirection: "row", alignItems: "center", gap: 10 }}
+                key={index}
+              >
+                <CircleCheck color={"#35d671"} size={17} />
+                <Text key={index} style={styles.textSecondary}>
+                  {service}
+                </Text>
+              </View>
+            ))}
+          </View>
 
-            <BriefcaseBusiness />
+          <View style={{ width: "100%", paddingHorizontal: 20, marginTop: 10 }}>
+            <View
+              style={{ flexDirection: "row", alignItems: "center", gap: 10 }}
+            >
+              <MapPin color={"#35d671"} size={17} style={{ marginTop: 8 }} />
+              <Text style={styles.headerTitle}>Região de Atendimento</Text>
+            </View>
+            <Text style={styles.textSecondary}>{item.location}</Text>
           </View>
         </View>
+        {/* Adicionando Fotos */}
+        <View style={styles.imageGridContainer}>
+          <Text style={styles.headerTitle}>Fotos</Text>
+
+          <View style={styles.imageGrid}>
+            <View style={styles.imageMock} />
+            <View style={styles.imageMock} />
+            <View style={styles.imageMock} />
+            <ChevronRight
+              color={"#35d670bd"}
+              style={{ marginTop: 50 }}
+              size={25}
+            />
+          </View>
+        </View>
+      </View>
+      <View style={styles.footerArea}>
+        <ButtonEnter Icon={MessageCircle} name="Entrar em Contato" />
       </View>
     </SafeAreaView>
   );
