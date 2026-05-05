@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     fontSize: 35,
     color: "#ffffff",
   },
-  haderTitle: {
+  headerTitle: {
     fontWeight: "600",
     fontSize: 18,
     color: "#ffffff",

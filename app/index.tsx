@@ -1,15 +1,15 @@
 import { AntDesign } from "@expo/vector-icons";
-import { data } from "../components/utils/db/Listacategorias";
+import { data } from "../src/data/Listacategorias";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { styles } from "../components/StylesApps/Home/styleHome";
+import { styles } from "../src/components/Styles/Home/styleHome";
 import { Text, View, FlatList } from "react-native";
 
 import { useRouter } from "expo-router";
 
-import { ButtonPrestador } from "../components/AreaPrestador";
-import { Input } from "../components/Home/Input";
-import { Card } from "../components/Home/Card";
+import { ButtonPrestador } from "../src/components/AreaPrestador";
+import { Input } from "../src/components/Home/Input";
+import { Card } from "../src/components/Home/Card";
 
 export default function Home() {
   const router = useRouter();
@@ -22,7 +22,7 @@ export default function Home() {
 
         <View style={styles.containerHeader}>
           <Text style={styles.logo}>chamaEu</Text>
-          <Text style={styles.haderTitle}>
+          <Text style={styles.headerTitle}>
             Encontre profissionais na sua cidade
           </Text>
         </View>

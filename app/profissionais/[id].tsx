@@ -2,20 +2,20 @@ import { View, Text } from "react-native";
 import { Stack, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { data } from "../../components/utils/db/Listacategorias";
-import { IconsMain } from "../../components/Home/IconsMain";
-import { styles } from "../../components/StylesApps/Profissionais/styleProfissionais";
-import { Card } from "../../components/Profissionais/Card";
-import { profile } from "../../components/utils/db/Profile";
+import { data } from "../../src/data/Listacategorias";
+import { IconsMain } from "../../src/components/Home/IconsMain";
+import { styles } from "../../src/components/Styles/Profissionais/styleProfissionais";
+import { Card } from "../../src/components/Profissionais/Card";
+import { profile } from "../../src/data/Profile";
 import { useRouter } from "expo-router";
 
 import { FlatList } from "react-native";
 
 export default function Detalhe() {
   const { id } = useLocalSearchParams();
+  const router = useRouter();
 
   const item = data.find((i) => i.id === id);
-  const dataProfile = profile.find((p) => p.id === id);
 
   if (!item) {
     return (
@@ -24,7 +24,6 @@ export default function Detalhe() {
       </SafeAreaView>
     );
   }
-  const router = useRouter();
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -52,13 +51,13 @@ export default function Detalhe() {
         data={profile.filter((p) => p.profession === item.profession)}
         keyExtractor={(data) => data.id}
         numColumns={1}
-        renderItem={({ item }) => (
+        renderItem={({ item: profileItem }) => (
           <Card
-            name={item.name}
-            description={item.description}
-            location={item.location}
+            name={profileItem.name}
+            description={profileItem.description}
+            location={profileItem.location}
             onPress={() =>
-              router.push(`/profissionais/profile/${dataProfile.id}`)
+              router.push(`/profissionais/profile/${profileItem.id}`)
             }
           />
         )}
