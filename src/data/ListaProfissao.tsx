@@ -11,6 +11,14 @@ export const profissaoIcon = {
   encanador: Wrench,
   eletricista: Plug,
   pedreiro: Hammer,
+  faxineiro: UserMinus,
+  jardineiro: UserMinus,
 } as const;
 
-export type Profession = "pintor" | "encanador" | "eletricista" | "pedreiro";
+export type Profession =
+  | "pintor"
+  | "encanador"
+  | "eletricista"
+  | "pedreiro"
+  | "faxineiro"
+  | "jardineiro";

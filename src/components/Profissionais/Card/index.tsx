@@ -1,8 +1,11 @@
-import { Text, TouchableOpacity, View } from "react-native";
-import { styles } from "./style";
 import { MapPin, User } from "lucide-react-native";
-import PictureProfile from "../PictureProfile";
-import { ButtonEnter } from "../ButtonEnter";
+import { Text, View } from "react-native";
+
+import { ButtonEnter } from "@/src/components/Profissionais/ButtonEnter";
+import PictureProfile from "@/src/components/Profissionais/PictureProfile";
+
+import { styles } from "./style";
+
 type Props = {
   name: string;
   description: string;
@@ -27,7 +30,11 @@ export function Card({ name, description, location, onPress }: Props) {
           <Text style={{ fontSize: 18, fontWeight: 600, letterSpacing: 1.2 }}>
             {name}
           </Text>
-          <Text style={{ color: "#3f3f3f", flexWrap: "wrap", width: "80%" }}>
+          <Text
+            numberOfLines={4}
+            ellipsizeMode="tail"
+            style={{ color: "#3f3f3f", flexWrap: "wrap", width: "80%" }}
+          >
             {description}
           </Text>
           <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>

@@ -1,7 +1,9 @@
 import { TouchableOpacity, View, Text } from "react-native";
+
+import { type Profession } from "@/src/data/ListaProfissao";
+import { IconsMain } from "@/src/components/Home/IconsMain";
+
 import { styles } from "./style";
-import { Profession } from "../../../data/ListaProfissao";
-import { IconsMain } from "../IconsMain";
 
 type Props = {
   idCard: string;

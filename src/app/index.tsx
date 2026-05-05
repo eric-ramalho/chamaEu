@@ -1,15 +1,20 @@
 import { AntDesign } from "@expo/vector-icons";
-import { data } from "../src/data/Listacategorias";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { styles } from "../src/components/Styles/Home/styleHome";
-import { Text, View, FlatList } from "react-native";
-
 import { useRouter } from "expo-router";
+import {
+  Text,
+  View,
+  FlatList,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import { ButtonPrestador } from "../src/components/AreaPrestador";
-import { Input } from "../src/components/Home/Input";
-import { Card } from "../src/components/Home/Card";
+import { ButtonPrestador } from "@/src/components/AreaPrestador";
+import { Card } from "@/src/components/Home/Card";
+import { Input } from "@/src/components/Home/Input";
+import { styles } from "@/src/components/Styles/Home/styleHome";
+import { data } from "@/src/data/Listacategorias";
 
 export default function Home() {
   const router = useRouter();
@@ -30,7 +35,12 @@ export default function Home() {
 
       <View style={styles.contentArea}>
         <View style={styles.containerInput}>
-          <Input placeholder="Qual serviço você precisa?" />
+          <TouchableWithoutFeedback
+            onPress={Keyboard.dismiss}
+            accessible={false}
+          >
+            <Input placeholder="Qual serviço você precisa?" />
+          </TouchableWithoutFeedback>
         </View>
 
         <View

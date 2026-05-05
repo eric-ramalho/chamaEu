@@ -1,10 +1,12 @@
+import { type ComponentType } from "react";
 import { Text, TouchableOpacity } from "react-native";
+
 import { styles } from "./style";
-import { User, MessageCircle } from "lucide-react-native";
+
 type Props = {
   name: string;
   onPress?: () => void;
-  Icon?: React.ComponentType<{ color: string }>;
+  Icon?: ComponentType<{ color: string }>;
 };
 export function ButtonEnter({ name, onPress, Icon, ...rest }: Props) {
   return (

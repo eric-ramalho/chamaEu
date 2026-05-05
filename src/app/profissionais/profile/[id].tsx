@@ -1,27 +1,26 @@
-import {
-  Text,
-  View,
-  FlatList,
-  Pressable,
-  TouchableOpacity,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { Stack, useLocalSearchParams } from "expo-router";
+import { Stack, router, useLocalSearchParams } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { styles } from "../../../src/components/Styles/Profissionais/Profile/styleProfile";
-import PictureProfile from "../../../src/components/Profissionais/PictureProfile";
-import { profile } from "../../../src/data/Profile";
-import { MockupImages } from "../../../src/data/MockupImages";
-import { router } from "expo-router";
 import {
-  MapPin,
+  ArrowLeft,
   BriefcaseBusiness,
   CircleCheck,
-  ChevronRight,
+  MapPin,
   MessageCircle,
-  ArrowLeft,
 } from "lucide-react-native";
-import { ButtonEnter } from "../../../src/components/Profissionais/ButtonEnter";
+import {
+  FlatList,
+  Pressable,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
+import { ButtonEnter } from "@/src/components/Profissionais/ButtonEnter";
+import PictureProfile from "@/src/components/Profissionais/PictureProfile";
+import { styles } from "@/src/components/Styles/Profissionais/Profile/styleProfile";
+import { MockupImages } from "@/src/data/MockupImages";
+import { profile } from "@/src/data/Profile";
 
 export default function Detalhe() {
   const { id } = useLocalSearchParams();

@@ -1,7 +1,9 @@
-import { TouchableOpacity, View, Text } from "react-native";
-import { styles } from "./style";
-import { profissaoIcon, Profession } from "../../../data/ListaProfissao";
 import { HelpCircle } from "lucide-react-native";
+import { View } from "react-native";
+
+import { profissaoIcon, type Profession } from "@/src/data/ListaProfissao";
+
+import { styles } from "./style";
 
 type Props = {
   profession: Profession;

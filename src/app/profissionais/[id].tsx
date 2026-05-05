@@ -1,15 +1,13 @@
-import { View, Text } from "react-native";
-import { Stack, useLocalSearchParams } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { data } from "../../src/data/Listacategorias";
-import { IconsMain } from "../../src/components/Home/IconsMain";
-import { styles } from "../../src/components/Styles/Profissionais/styleProfissionais";
-import { Card } from "../../src/components/Profissionais/Card";
-import { profile } from "../../src/data/Profile";
-import { useRouter } from "expo-router";
+import { FlatList, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import { FlatList } from "react-native";
+import { IconsMain } from "@/src/components/Home/IconsMain";
+import { Card } from "@/src/components/Profissionais/Card";
+import { styles } from "@/src/components/Styles/Profissionais/styleProfissionais";
+import { data } from "@/src/data/Listacategorias";
+import { profile } from "@/src/data/Profile";
 
 export default function Detalhe() {
   const { id } = useLocalSearchParams();

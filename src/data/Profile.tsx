@@ -1,5 +1,6 @@
 import * as Crypto from "expo-crypto";
-import { Profession } from "./ListaProfissao";
+
+import { type Profession } from "@/src/data/ListaProfissao";
 
 type Profile = {
   id: string;

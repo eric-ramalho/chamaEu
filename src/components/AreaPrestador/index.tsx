@@ -1,5 +1,6 @@
-import { Text, View, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { Text, TouchableOpacity } from "react-native";
+
 import { styles } from "./style";
 
 type Props = {
